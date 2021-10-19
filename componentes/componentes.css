@@ -1,0 +1,149 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: white;
+    background-color: rgb(24, 24, 24);
+}
+.nav-bar{
+    background-color: rgb(104, 104, 104);
+    padding: 20px;
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 1.3em;
+    width: 100%;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+.menu{
+    background-color: rgb(36, 36, 36);
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.3s;
+
+}
+.menu__link{
+    display: block;
+    padding: 15px;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+
+}
+.menu__link:hover{
+    background-color: black;
+}
+.menu__link{
+    background-color:  rgb(36, 36, 38);
+    padding-left: 30px;
+}
+.mostrar{
+    margin-left:0 ;
+}
+.menu{
+    position: relative;
+    z-index: 1;
+}
+.padre{
+    margin-top: -150px;
+}
+
+.contenido{
+    display: grid;
+    grid-template-columns: 2fr 2fr  ;
+    gap: 25px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.contenido div{
+    background-color: black;
+}
+.contenido img{
+    width: 100%;
+    height: 150px;
+}
+.contenido p{
+    background-color: black;
+    font-size: 15px;
+    margin: 10px 0;
+    padding-left: 10px;
+    padding-top: 7px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+.contenido a{
+    display:inline-flex;
+    width: 60px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(10, 10, 10);
+    text-decoration: none;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    border: 1px white dotted;
+    position: relative;
+    overflow: hidden;
+}
+.contenido span{
+    position: relative;
+    z-index: 2;
+}
+.contenido a::after{
+    content: "";
+    background-color: rgb(49, 49, 49);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: -100%;
+    transition: all 0.4s;
+}
+.contenido a:hover::after{
+    top: 0;
+}
+.contenido a:hover{
+    border: 1px white solid;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top:20px ;
+    padding-bottom:40px ;
+    text-shadow:0px 0px 5px rgb(8, 8, 8);
+}
+@media(min-width:1024px){
+    .nav-bar{
+        display: none;
+    }
+    .menu{
+        margin-left: 0;
+        display: flex;
+    }  
+    .padre{
+        margin-top: 10px;
+    }
+    .contenido{
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr 4fr ;
+        gap: 25px;
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .contenido img{ 
+        width: 100%;
+        height: 145px;
+    }
+}
+
